@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.IndexController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SwitchServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.StatusSwitchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SwitchServlet</servlet-name>
+        <url-pattern>/switch</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ChangePeriodServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.ChangePeriodController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePeriodServlet</servlet-name>
+        <url-pattern>/change_period</url-pattern>
+    </servlet-mapping>
+</web-app>

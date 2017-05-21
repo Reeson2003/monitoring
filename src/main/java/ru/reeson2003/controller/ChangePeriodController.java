@@ -1,8 +1,7 @@
 package ru.reeson2003.controller;
 
-import ru.reeson2003.model.Model;
-import ru.reeson2003.model.domain.Parameter;
-import ru.reeson2003.model.main.AppContext;
+import ru.reeson2003.Parameter;
+import ru.reeson2003.model.AppContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,17 +16,10 @@ import java.io.IOException;
  * @author Pavel Gavrilov.
  */
 public class ChangePeriodController extends HttpServlet {
-    private Model model;
-
-    @Override
-    public void init() throws ServletException {
-        model = AppContext.getInstance().getModel();
-    }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String parameterName = req.getParameter("parameter");
-        Parameter parameter = model.getParameter(parameterName);
+        Parameter parameter = AppContext.getInstance().getModel().getParameter(parameterName);
         Integer period = null;
         try {
             String p = req.getParameter("period");
@@ -37,6 +29,6 @@ public class ChangePeriodController extends HttpServlet {
         }
         if(period != null && period >= 0)
             parameter.setRequestPeriod(period);
-        resp.sendRedirect("/");
+        resp.sendRedirect("index.html");
     }
 }

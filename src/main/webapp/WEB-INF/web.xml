@@ -29,4 +29,41 @@
         <servlet-name>ChangePeriodServlet</servlet-name>
         <url-pattern>/change_period</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PluginsServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.PluginsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PluginsServlet</servlet-name>
+        <url-pattern>/plugins</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.PluginsRemoveController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveServlet</servlet-name>
+        <url-pattern>/remove</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PluginSelectServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.PluginSelectController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PluginSelectServlet</servlet-name>
+        <url-pattern>/select</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeParameterServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.ChangeParameterController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeParameterServlet</servlet-name>
+        <url-pattern>/change_parameter</url-pattern>
+    </servlet-mapping>
+
 </web-app>

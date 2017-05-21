@@ -10,17 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Date: 20.05.2017.
- * Time: 15:19.
+ * Date: 21.05.2017.
+ * Time: 22:08.
  *
  * @author Pavel Gavrilov.
  */
-public class StatusSwitchController extends HttpServlet {
+public class ChangeParameterController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String parameterName = req.getParameter("parameter");
         Parameter parameter = AppContext.getInstance().getModel().getParameter(parameterName);
-        parameter.setRequestStatus(!parameter.getRequestStatus());
+        String p = req.getParameter("value");
+        parameter.setName(p);
         resp.sendRedirect("index.html");
     }
 }

@@ -26,6 +26,7 @@
         <th>Статус опроса</th>
         <th>Период опроса</th>
         <th>Изменить период опроса</th>
+        <th>Изменить параметр</th>
     </tr>
     <c:forEach var="parameter" items="${parameters}">
         <tr>
@@ -50,8 +51,17 @@
                     <input type="submit" value="Задать">
                 </form>
             </td>
+            <td>
+                <form action="change_parameter" method="get">
+                    <input type="hidden" name="parameter" value="${parameter.name}">
+                    <input type="text" name="value">
+                    <input type="submit" value="Задать">
+                </form>
+            </td>
         </tr>
     </c:forEach>
 </table>
+<br>
+<a href="plugins">Выбрать плагин</a>
 </body>
 </html>

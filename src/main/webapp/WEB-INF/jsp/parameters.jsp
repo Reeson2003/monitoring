@@ -27,6 +27,8 @@
         <th>Период опроса</th>
         <th>Изменить период опроса</th>
         <th>Изменить параметр</th>
+        <td>Конфигурация</td>
+        <td>Изменить конфигурацию</td>
     </tr>
     <c:forEach var="parameter" items="${parameters}">
         <tr>
@@ -54,6 +56,14 @@
             <td>
                 <form action="change_parameter" method="get">
                     <input type="hidden" name="parameter" value="${parameter.name}">
+                    <input type="text" name="value">
+                    <input type="submit" value="Задать">
+                </form>
+            </td>
+            <td>${parameter.configuration}</td>
+            <td>
+                <form action="change_configuration" method="get">
+                    <input type="hidden" name="configuration" value="${parameter.name}">
                     <input type="text" name="value">
                     <input type="submit" value="Задать">
                 </form>

@@ -66,4 +66,13 @@
         <url-pattern>/change_parameter</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ChangeConfigurationServlet</servlet-name>
+        <servlet-class>ru.reeson2003.controller.ChangeConfigurationController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeConfigurationServlet</servlet-name>
+        <url-pattern>/change_configuration</url-pattern>
+    </servlet-mapping>
+
 </web-app>
